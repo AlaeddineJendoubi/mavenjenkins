@@ -76,4 +76,12 @@ pipeline {
             }
         }
     }
+    post{
+    always {  
+             
+            emailext attachLog: true,
+            body: 'This is a mail from Jenkins',to: "alaeddine.jendoubi@esprit.tn", subject:'test'
+            
+        }
+    }
 }
